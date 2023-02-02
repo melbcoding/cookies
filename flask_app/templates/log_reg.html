@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+</head>
+
+<body class="flex col cent-around">
+    <div class="flex cent-around">
+        <div class="main flex col cent-around container blb ">
+            <h2>Sign Up</h2>
+            <p>Password must be at least 8 characters, with a mix of upper and lowercase letters, atleast one number and one
+                special symbol.</p>
+            <form class="form flex col cent-around container blb" action="/register" method="post">
+                <label for="fname">First Name:</label>
+                <input type="text" name="first_name">
+                <label for="lname">Last Name:</label>
+                <input type="text" name="last_name">
+                <label for="user_email">Email:</label>
+                <input type="email" name="email">
+                <label for="pword">Password:</label>
+                <input type="password" name="password">
+                <label for="cpword">Confirm Password:</label>
+                <input type="password" name="confpassword">
+                <button type="submit">Register</button>
+            </form>
+        </div>
+        <div class="flex col blb cent-around login ">
+            <h2>Login</h2>
+            <form  class="form flex col cent-around"action="/login" method="post">
+                <label for="user_email">Email:</label>
+                <input type="email" name="email">
+                <label for="password">Password:</label>
+                <input type="password" name="password">
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        
+    </div>
+    
+        
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="flash flex col cent-around container">
+        <h2>oops!</h2>
+        {% for message in messages %}
+        <p>{{message}}</p>
+
+        {%endfor%}
+
+    </div>
+    {%endif%}
+    {%endwith%}
+
+ 
+
+</body>
+
+</html>

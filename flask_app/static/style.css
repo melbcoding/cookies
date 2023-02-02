@@ -1,0 +1,67 @@
+*{
+    padding:0 auto;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 20px;
+}
+body{
+    text-align: center;
+}
+.flash{
+    padding:5px;
+    border: solid 2px red;
+    color: red;
+    font-weight: bold;
+    width:20%;
+}
+
+.flex{
+    display: flex;
+}
+
+.col{
+    flex-direction: column;
+}
+
+.cent-around{
+    justify-content: space-around;
+    align-items: center;
+}
+.container{
+    padding: 10px;
+    margin:20px;
+    min-height: 300px;
+}
+
+
+.blb{
+    border: solid lightblue 5px;
+    color: rgb(17, 82, 224);
+    font-weight: bold;
+
+}
+.blb input{
+    border: solid lightblue 2px;
+
+}
+.blb button{
+    border: solid lightblue 5px;
+    background-color: lightblue;
+    color: rgb(17, 82, 224);
+
+}
+
+.form{
+    width: 40%;
+    border:none
+}
+.main{
+    width:30%;
+}
+.login{
+    height:200px;
+    width:250px;
+    background-color: lightblue;
+    align-items: center;
+    justify-content: space-evenly;
+}
